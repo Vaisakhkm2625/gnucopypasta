@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>gnuCopypasta</title>
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css.min.css"/> -->
+        <!-- <link rel="stylesheet" href="https://unpkg.com/magick.css"> -->
+        <link rel="stylesheet" href="https://unpkg.com/papercss@1.9.2/dist/paper.min.css" />
+
+        <link href="css/style.css" rel="stylesheet">
+
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <div class="paper container container-md" >
+
+            <script>
+                
+
+        function copyText(id) {
+            const text = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                document.getElementById("alert-1").checked = false;
+                setTimeout(()=>{ 
+                    document.getElementById("alert-1").checked = true;
+                },3000)
+
+            });
+        }
+
+            </script>
+
+            <input class="alert-state" id="alert-1" type="checkbox" checked>
+            <div class="alert alert-primary dismissible">
+               Copied!! Yo, Now you got you own gnu copypasta in yo clipboard!!!
+                <label class="btn-close" for="alert-1">X</label>
+            </div>
+
+            <h1 class="text-center">GNU/Linux Copypasta </h1>
+
+                <p id="copypasta"class="col border border-primary shadow shadow-hover" popover-top="Click to copy" onclick="copyText('copypasta')">
+                    I'd just like to interject for a moment. What you're refering to as Linux, is in fact, GNU/Linux, or as I've recently taken to calling it, GNU plus Linux. Linux is not an operating system unto itself, but rather another free component of a fully functioning GNU system made useful by the GNU corelibs, shell utilities and vital system components comprising a full OS as defined by POSIX.
+                    Many computer users run a modified version of the GNU system every day, without realizing it. Through a peculiar turn of events, the version of GNU which is widely used today is often called Linux, and many of its users are not aware that it is basically the GNU system, developed by the GNU Project.
+                    There really is a Linux, and these people are using it, but it is just a part of the system they use. Linux is the kernel: the program in the system that allocates the machine's resources to the other programs that you run. The kernel is an essential part of an operating system, but useless by itself; it can only function in the context of a complete operating system. Linux is normally used in combination with the GNU operating system: the whole system is basically GNU with Linux added, or GNU/Linux. All the so-called Linux distributions are really distributions of GNU/Linux!
+                </p>
+
+
+            <!-- </div> -->
+
+
+        </div>
+    </body>
+</html>
